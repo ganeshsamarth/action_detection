@@ -22,7 +22,8 @@ for i,labels in enumerate(label_names):
         while success:
             if count%jump_frame==0:
                 cv2.imwrite("frame%d.jpg" % count, image)  # save frame as JPEG file
-                success, image = vidcap.read()
-                print('Read a new frame: ', success)
+            success, image = vidcap.read()
+            print('Read a new frame: ', success)
             count += 1
+
 
