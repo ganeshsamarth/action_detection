@@ -21,7 +21,7 @@ for i,labels in enumerate(label_names):
         os.mkdir(video_directory+'/'+labels+'/'+videos)
         while success:
             if count%jump_frame==0:
-                cv2.imwrite("frame%d.jpg" % count, image)  # save frame as JPEG file
+                cv2.imwrite(video_directory+'/'+labels+'/'+videos+'/'+"frame%d.jpg" % count, image)  # save frame as JPEG file
             success, image = vidcap.read()
             print('Read a new frame: ', success)
             count += 1
